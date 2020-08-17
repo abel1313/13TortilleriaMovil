@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.trece.tortilleriamovil.R;
+
 public class Registrar extends AppCompatActivity {
 
     @Override
