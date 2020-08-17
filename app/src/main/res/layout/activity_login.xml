@@ -97,6 +97,7 @@
     android:layout_height="45dp"
     android:layout_marginTop="7dp"
     android:text="Acceder"
+    android:id="@+id/btnAccesar"
     />
     </LinearLayout>
 
