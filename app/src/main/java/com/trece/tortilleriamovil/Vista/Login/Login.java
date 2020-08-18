@@ -2,6 +2,7 @@ package com.trece.tortilleriamovil.Vista.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ import com.trece.tortilleriamovil.R;
 public class Login extends AppCompatActivity {
 private EditText txtUsuario,txtContra;
 private Button btnAccesar;
-private UsuarioDAO usDAO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +27,15 @@ private UsuarioDAO usDAO;
         btnAccesar = findViewById(R.id.btnAccesar);
         txtUsuario =(EditText) findViewById(R.id.txtUsu);
         txtContra = (EditText)findViewById(R.id.txtContra);
+
         btnAccesar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
            if(!txtUsuario.getText().toString().equals("") && !txtContra.getText().toString().equals(""))
                 {
-                    usDAO = new ConsultaUsuario();
-                    Usuario u = usDAO.acceder(txtUsuario.getText().toString(),txtContra.getText().toString());
-                    if(u.getId_Usuario() != 0)
-                    {
-                        Toast.makeText(getApplicationContext(),"Bienvenido "+txtUsuario.getText(),Toast.LENGTH_SHORT).show();
-                    }else
-                    {
-                        Toast.makeText(getApplicationContext(),"Verifique sus datos "+txtContra.getText(),Toast.LENGTH_SHORT).show();
-                    }
+                    Intent intent = new Intent(v.getContext(),Registrar.class);
+                    startActivity(intent);
+                    Login.super.finish();
 
                 }else
                  {

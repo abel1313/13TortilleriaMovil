@@ -4,6 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Vista.Login.Registrar">
+    tools:context=".Vista.Login.Registrar"
+    android:orientation="vertical"
+    android:background="@color/colorRegistrar"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Registrar usuario"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="65dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="nombre usuario"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#F1DBD7"
+            android:textColor="#000"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ingrese usuario"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:focusable="true"
+            android:id="@+id/txtUsuarioRegistrar"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Contraeña"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#F1DBD7"
+            android:textColor="#000"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:hint="Ingrese contraseña"
+            android:id="@+id/txtContraRegistrar"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Contraeña"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#F1DBD7"
+            android:textColor="#000"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:hint="Repita la contraseña"
+            android:id="@+id/txtRepitaContraRegistrar"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Registrar"
+            android:textStyle="bold"
+            android:id="@+id/btnRegistrar"
+            ></Button>
+
+    </LinearLayout>
 
 </RelativeLayout>
